@@ -4,7 +4,7 @@ var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var random = document.getElementById("random");
 
-function setGradient() {
+const setGradient = () => {
     body.style.background = "linear-gradient(to right, "
                             + color1.value
                             + ", "
@@ -13,7 +13,7 @@ function setGradient() {
     css.textContent = body.style.background + ";";
 }
 
-function getRandomColor() {
+const getRandomColor = () => {
     var letters = '0123456789ABCDEF';
     var color = '#';
     for (var i = 0; i < 6; i++) {
@@ -22,7 +22,7 @@ function getRandomColor() {
     return color;
 }
 
-function randomizeGradient() {
+const randomizeGradient = () => {
     color1.value = getRandomColor();
     color2.value = getRandomColor();
     setGradient();
